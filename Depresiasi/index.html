@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Aplikasi Penghitungan Depresiasi (236 & 259)</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+        
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <link rel="stylesheet" href="css/lightbox.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.html"><h1><font color="Blue">Perhitungan Depresiasi</font></h1></a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <section id="about1" class="page-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <h4>Straight Line</h4>
+                        <div class="line-dec"></div>
+                        <p> Merupakan metode perhitungan penyusutan aktiva tetap dengan karakteristik nilai beban penyusutan sama setiap tahunnya. Nilai penyusutan tersebut tidak berubah sampai usia ekonomis aset yang bersangkutan habis..</p><br>
+                        <div class="primary-blue-button">
+                            <a href="StraightLine.php">Next</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <h4>Reducing Balance</h4>
+                        <div class="line-dec"></div>
+                        <p>Metode penyusutan aktiva atau aset tetap yang ditentukan berdasarkan persentase tertentu dan dihitung dari harga buku pada tahun yang bersangkutan.</p><br><br><br>
+                        <div class="primary-blue-button">
+                            <a href="ReducingBalance.php">Next</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <h4>Sum of The Year</h4>
+                        <div class="line-dec"></div>
+                        <p>Merupakan penyusutan dipercepat berdasar pada pertimbangan biaya maintenance (perawatan) serta perbaikan aktiva tetap semakin lama cenderung bertambah seiring pertambahan usia aktiva tetap itu sendiri.</p><br>
+                        <div class="primary-blue-button">
+                            <a href="SumOfTheYear.php">Next</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="service-item">
+                        <h4>Unit of Activity</h4>
+                        <div class="line-dec"></div>
+                        <p>Metode ini mengasumsikan penyusutan sebagai fungsi dari produktivitas atau penggunaan dan bukan dari segi berlalunya waktu. Dengan gambaran di atas, penentuan umur penyusutan mesin produksi tidak memiliki masalah tertentu karena penggunaan relatif mudah diukur.</p>
+                        <div class="primary-blue-button">
+                            <a href="UnitOfActivity.php">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div> -->
+
+    <footer>
+        <p align="center">Muhamad Yusuf Fatkurahman(L200190236)
+        <p align="center">Ghulam Nahar Adiba Karim(L200190259)
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // navigation click actions 
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');         
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        var offSet = 50;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+    </script>
+</body>
+</html>
